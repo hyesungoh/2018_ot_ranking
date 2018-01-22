@@ -14,7 +14,7 @@ class RankController < ApplicationController
     t.score = 0
     t.save
 
-    redirect_to "/her0807"
+    redirect_to "/her0807hyesunggodgod"
   end
 
   def add
@@ -22,7 +22,7 @@ class RankController < ApplicationController
     t.score += params[:score].to_i
     t.save
 
-    redirect_to "/her0807"
+    redirect_to "/her0807hyesunggodgod"
   end
 
 end
