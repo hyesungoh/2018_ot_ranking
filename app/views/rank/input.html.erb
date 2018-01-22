@@ -1,0 +1,22 @@
+<h1>점수 추가하는 곳 ^^7</h1>
+
+<br/><br/>
+
+<h4>조 추가 하기</h4>
+<form action="rank/temp" method="post">
+  <input type="text" name="name">
+  <input type="submit" value="오케">
+</form>
+
+<br/><br/>
+
+<h4>조에 점수 추가하기</h4>
+<form action="rank/add" method="post">
+  <% @t.each do |team| %>
+    <input type="radio" name="id" value="<%=team.id%>"> <%=team.name%> : 현재 점수 : <%=team.score%> <br/>
+  <% end %>
+  추가할 점수 : <input type="number" name="score">
+
+  <br/>
+  <input type="submit" value="추가합니당">
+</form>

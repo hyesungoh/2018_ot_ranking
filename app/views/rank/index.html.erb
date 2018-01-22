@@ -1,0 +1,96 @@
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">IT융합자율학부 새내기배움터</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">상품 확인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">조별 점수 확인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <strong>2018 성공회대학교 새내기배움터에 오신 것을 환영합니다!</strong>
+          </h1>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">게임을 통해 얻게되는 점수로 등수를 매겨 상품을 분배 해 드릴 예정입니다!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">상품 보러 가기</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-primary" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-white">등수별 상품 소개</h2>
+          <hr class="light my-4">
+          <p class="text-faded mb-4">사진을 넣던지 텍스트로 설명하던지 블라블라 </p>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">등수 보러 가기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">조별 등수</h2>
+          <hr class="my-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">등수</th>
+                <th scope="col">조 이름</th>
+                <th scope="col">점수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @t.each do |team| %>
+                <tr>
+                  <th scope="row"><%=@rank%></th>
+                  <td><%=team.name%></td>
+                  <td><%=team.score%></td>
+                  <%@rank = @rank + 1%>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">성공회대학교 IT융합자율학부 비상대책위원회 제작</h2>
+      <a class="btn btn-light btn-xl sr-button" href="">소스 보기</a>
+    </div>
+  </section>
