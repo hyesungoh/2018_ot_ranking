@@ -10,6 +10,17 @@
 
 <br/><br/>
 
+<h4>조 삭제 하기</h4>
+<form action="rank/delete" method="post">
+  <% @t.each do |team| %>
+    <input type="radio" name="id" value="<%=team.id%>"> <%=team.name%><br/>
+  <% end %>
+  <input type="submit" value="이거 삭제버튼임">
+</form>
+
+
+<br/><br/>
+
 <h4>조에 점수 추가하기</h4>
 <form action="rank/add" method="post">
   <% @t.each do |team| %>

@@ -25,4 +25,11 @@ class RankController < ApplicationController
     redirect_to "/her0807hyesunggodgod"
   end
 
+  def delete
+    t = Team.find(params[:id])
+    t.destroy
+
+    redirect_to "/her0807hyesunggodgod"
+  end
+
 end
